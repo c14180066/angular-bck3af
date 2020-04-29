@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  count = 0;
   angka1 = 0;
   angka2 = 0;
-  operator = '';
   tanda = '';
-   constructor(private router : Router){
+  count = 0;
+  operator = '';
+  constructor(private router : Router){
 
   }
   input(data1){
@@ -20,7 +20,6 @@ export class AppComponent  {
     }
     else{
       this.angka2 = this.angka2*10 + data1;
-   
     }
   }
   operatorData(data1){
