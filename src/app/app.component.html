@@ -1,25 +1,24 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+{{angka1}}&nbsp;{{tanda}}&nbsp;{{angka2}}
+</div>
+<br>
+<button (click)="input(7)" value=7>7</button>
+<button (click)="input(8)" value=8>8</button>
+<button (click)="input(9)" value=9>9</button>
+<br>
+<button (click)="input(4)" value=4>4</button>
+<button (click)="input(5)" value=5>5</button>
+<button (click)="input(6)" value=6>6</button>
+<br>
+<button (click)="input(1)" value=1>1</button>
+<button (click)="input(2)" value=2>2</button>
+<button (click)="input(3)" value=3>3</button>
 <br><br>
-<input [(ngModel)] = "hasil" type="text">
-<br>
-<br>
-<button (click)="input()"> 7 </button>
-<button (click)="input()"> 8 </button>
-<button (click)="input()"> 9 </button>
-<br>
-<button (click)="input()"> 6 </button>
-<button (click)="input()"> 5 </button>
-<button (click)="input()"> 4 </button>
-<br>
-<button (click)="input()"> 3 </button>
-<button (click)="input()"> 2 </button>
-<button (click)="input()"> 1 </button>
-<br>
-<button (click)="input()"> - </button>
-<button (click)="input()"> + </button>
-<button (click)="input()"> * </button>
-<button (click)="input()"> = </button>
+<button (click)="operatorData('tambah')">+</button>
+<button (click)="operatorData('kurang')">-</button>
+<button (click)="operatorData('kali')">*</button>
+<button (click)="pindah()">=</button>
+<br><br>
+<button (click)="reset()">RESET</button>
 
+<router-outlet></router-outlet>
