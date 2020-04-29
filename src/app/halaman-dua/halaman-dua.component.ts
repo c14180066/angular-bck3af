@@ -9,25 +9,25 @@ import { ActivatedRoute } from '@angular/router';
 export class HasilComponent implements OnInit {
 
   constructor(private route : ActivatedRoute) { }
-  angkapertama='';
-  angkakedua='';
-  opr='';
-  hasil=0;
+  angkapertama = '';
+  angkakedua = '';
+  operator = '';
+  hasil = 0;
   ngOnInit() {
-    let pert= this.route.snapshot.paramMap.get('angka1');
-    this.angkapertama=pert;
-     let op= this.route.snapshot.paramMap.get('operator');
-    this.opr=op;
-     let ked= this.route.snapshot.paramMap.get('angka2');
-    this.angkakedua=ked;
-    if(this.opr=="tambah"){
-      this.hasil=parseInt(this.angkapertama)+parseInt(this.angkakedua);
+    let data1 = this.route.snapshot.paramMap.get('angka1');
+    this.angkapertama = data1;
+     let operator = this.route.snapshot.paramMap.get('operator');
+    this.operator = operator;
+     let data2 = this.route.snapshot.paramMap.get('angka2');
+    this.angkakedua = data2;
+    if(this.operator == "tambah"){
+      this.hasil=parseInt(this.angkapertama) + parseInt(this.angkakedua);
     }
-    if(this.opr=="kali"){
-       this.hasil=parseInt(this.angkapertama)*parseInt(this.angkakedua);
+    if(this.operator == "kali"){
+       this.hasil=parseInt(this.angkapertama) * parseInt(this.angkakedua);
     }
-    if(this.opr=="kurang"){
-       this.hasil=parseInt(this.angkapertama)-parseInt(this.angkakedua);
+    if(this.operator == "kurang"){
+       this.hasil=parseInt(this.angkapertama) - parseInt(this.angkakedua);
     }
   }
 

@@ -27,13 +27,13 @@ export class AppComponent  {
     if(this.count==0){
       this.count=this.count+1;
       if(data1 == "tambah"){
-        this.tanda='+';
+        this.tanda = '+';
       }
        if(data1 == "kurang"){
-        this.tanda='-';
+        this.tanda = '-';
       }
        if(data1 == "kali"){
-        this.tanda='*';
+        this.tanda = '*';
       }
       this.operator += data1;
     }
